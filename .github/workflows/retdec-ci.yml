@@ -5,12 +5,12 @@ name: RetDec CI
 on:
   push:
     branches:
-      - master   # Activate CI on push on master.
+      - main     # Activate CI on push on master.
       - 'test-*' # Activate CI on branch with prefix test-.
 
   pull_request:
     branches:
-      - master # Activate on pull request.
+      - main   # Activate on pull request.
 
   workflow_dispatch: # Allow manual triggering of the workflow
     inputs:
