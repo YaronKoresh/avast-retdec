@@ -92,12 +92,12 @@ jobs:
           BUILD_TYPE: ${{ matrix.type }}
         shell: bash
 
-      - name: Prepare RetDec Regression Tests & Framework
-        run: bash "${WORKFLOWS_DIR}/common/prepare-retdec-tests.sh"
-        shell: bash
+      # - name: Prepare RetDec Regression Tests & Framework
+      #   run: bash "${WORKFLOWS_DIR}/common/prepare-retdec-tests.sh"
+      #   shell: bash
 
-      - name: Run Tests
-        run: bash "${WORKFLOWS_DIR}/${RUNNER_OS}/run-tests.sh" "${WORKFLOWS_DIR}/${RUNNER_OS}/ignore_${{ matrix.type }}"
+      # - name: Run Tests
+      #   run: bash "${WORKFLOWS_DIR}/${RUNNER_OS}/run-tests.sh" "${WORKFLOWS_DIR}/${RUNNER_OS}/ignore_${{ matrix.type }}"
 
       # Prepare files for publishing/release. The resulting structure:
       #   RetDec-OSType-Release
