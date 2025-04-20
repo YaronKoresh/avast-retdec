@@ -6,7 +6,7 @@ on:
   push:
     # Trigger anytime a release tag is created.
     tags:
-      - "v*"
+      - "*"
 
 env:
   # Universal ENV variable containing path to all workflows scripts.
@@ -85,7 +85,7 @@ jobs:
         working-directory: install
 
       - name: Archive Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: RetDec-${{ github.ref_name }}-${{ runner.os }}-Release
           path: RetDec-*
@@ -101,7 +101,7 @@ jobs:
 
       # Fetch artifacts from the build step.
       - name: Fetch Artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4.2.1
         with:
           path: artifacts
 
