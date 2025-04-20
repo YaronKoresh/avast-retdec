@@ -37,7 +37,7 @@ jobs:
 
       # Let other builds finish.
       fail-fast: false
-      max-parallel: 3 # Limit the parallel jobs to 3
+      max-parallel: 7 # Limit the parallel jobs to 3
 
     name: ${{ matrix.sys.os }} (${{ matrix.type }})
 
